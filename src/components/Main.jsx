@@ -6,6 +6,8 @@ import GetInTouch from "./GetInTouch.jsx";
 import Header from "./Header.jsx";
 import OurTeamSection from "./OurTeamSection.jsx";
 import ProcessSection from "./ProcessSection.jsx";
+import Testimonial from "./Testimonial.jsx"
+
 
 const Main = () => {
   return (
@@ -15,6 +17,7 @@ const Main = () => {
       <ProcessSection />
       <Gallery />
       <OurTeamSection />
+      <Testimonial/>
       <GetInTouch />
       <Footer />
     </>
