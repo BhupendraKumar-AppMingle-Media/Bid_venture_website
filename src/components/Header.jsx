@@ -1,89 +1,136 @@
-import React, { useState } from "react";
-import logo1 from '../images/logo.png'
+import { useState } from "react";
+import { MdOutlineMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
+import bidVentureLogo from "../images/logo.png";
 
 const Header = () => {
-    // toggle menu
-    //  const [isOpen,SetIsOpen]=useState(false);
-
-    //  const handleToggle = () => {
-    //   SetIsOpen(!isOpen);
-    //   };
-
-  
-
-
-
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div id="header">
+    <div className="relative">
 
 
-        {/* toggle button do */}
-           {/* Toggle Button (Visible Below 786px) */}
-      <button
-        className="block md:hidden p-2 rounded-md bg-gray-200 hover:bg-gray-300 focus:outline-none"
-        // onClick={handleToggle}
-        aria-label="Toggle Menu"
+      {/* Mobile Menu Icon */}
+      <div className="fixed top-4 left-4 z-20 md:hidden">
+        <MdOutlineMenu
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          className="text-3xl cursor-pointer"
+        />
+      </div>
+
+
+
+      {/* Mobile Header Logo */}
+      <div className="fixed top-4 right-4 z-20 md:hidden">
+        <img src={bidVentureLogo} alt="Logo" className="w-20" />
+      </div>
+
+      {/* Sidebar */}
+      <aside
+        className={`fixed top-0 left-0 h-full bg-white shadow-lg transition-transform transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } z-10 md:hidden w-3/4`}
       >
-        {/* Toggle Icon */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-800"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            // d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-          />
-        </svg>
-      </button>
-
-
-
-
-
-        {/* {isOpen&&( */}
-        <header className=" fixed top-0 font-bold  w-full z-50 flex  justify-evenly items-center px-8 py-4  bg-[#FFFFFF] shadow-md">
-        {/* Logo */}
-        {/* add logo here */}
-          {/* Logo */}
-          <div className="header-logo">
-          <img src={logo1} alt="Logo" className="h-16 w-auto" /> {/* Logo image */}
-        </div>
-        {/* Navigation Links */}
-        <nav className="header-links flex space-x-8">
-          <a
-            href="#process"
-            className="relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#5a39fe] after:block after:transition-all after:duration-300 after:origin-left"
+        <nav className="flex flex-col items-center space-y-4 mt-6">
+          <Link
+            to="/"
+            className="text-lg  font-semibold hover:text-indigo-600"
+            onClick={() => setIsSidebarOpen(false)}
           >
-            PROCESS
-          </a>
-          <a
-            href="#projects"
-            className="relative  hover:after:w-full after:w-0 after:h-[2px] after:bg-[#5a39fe] after:block after:transition-all after:duration-300 after:origin-left"
+            Home
+          </Link>
+          <Link
+            to="/works"
+            className="text-lg font-semibold hover:text-indigo-600"
+            onClick={() => setIsSidebarOpen(false)}
           >
-            PROJECTS
-          </a>
-          <a
-            href="#team"
-            className="relative  hover:after:w-full after:w-0 after:h-[2px] after:bg-[#5a39fe] after:block after:transition-all after:duration-300 after:origin-left"
+            Works
+          </Link>
+          <Link
+            to="/services"
+            className="text-lg font-semibold hover:text-indigo-600"
+            onClick={() => setIsSidebarOpen(false)}
           >
-            TEAM
-          </a>
-          <a
-            href="#contact"
-            className="relative  hover:after:w-full after:w-0 after:h-[2px] after:bg-[#5a39fe] after:block after:transition-all after:duration-300 after:origin-left"
+            Services
+          </Link>
+          <Link
+            to="/event"
+            className="text-lg font-semibold hover:text-indigo-600"
+            onClick={() => setIsSidebarOpen(false)}
           >
-            CONTACT
-          </a>
+            Event
+          </Link>
+          <Link
+            to="/aboutus"
+            className="text-lg font-semibold hover:text-indigo-600"
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            About Us
+          </Link>
+          <Link
+            to="/contactus"
+            className="text-lg font-semibold hover:text-indigo-600"
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            Contact Us
+          </Link>
         </nav>
-      </header> 
-      {/* )} */}
+      </aside>
+
+
+
+
+
+      {/* Header for Desktop */}
+      <header className="flex justify-between items-center  px-8 py-8 fixed top-0 z-10 shadow-md w-full min-h-16 bg-[#d3d7e9]">
+      {/* <header className="flex justify-between items-center  px-8 py-4 fixed top-0 z-10 shadow-md w-full min-h-16 bg-gradient-to-r from-[#f3f1f4] to-[#ea1c45]"> */}
+        {/* Logo */}
+        <img src={bidVentureLogo} alt="Logo" className="hidden md:block w-52" />
+
+        {/* Navigation Links */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link
+            to="/"
+            className="text-xl  font-semibold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Home
+          </Link>
+          <Link
+            to="/works"
+            className="text-xl font-semibold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Works
+          </Link>
+          <Link
+            to="/services"
+            className="text-xl font-semiabold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Services
+          </Link>
+          <Link
+            to="/event"
+            className="text-xl font-semibold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Event
+          </Link>
+          <Link
+            to="/aboutus"
+            className="text-xl font-semibold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            About Us
+          </Link>
+          <Link
+            to="/contactus"
+            className="text-xl font-semibold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Contact Us
+          </Link>
+        </nav>
+      </header>
+
+
+
+
     </div>
   );
 };

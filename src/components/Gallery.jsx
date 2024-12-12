@@ -1,4 +1,3 @@
-import React from "react";
 
 const Gallery = () => {
   // Card data
@@ -62,22 +61,25 @@ const Gallery = () => {
   return (
     <>
       <div id="projects" className="bg-gray-100 py-10">
+        {/* Section Title */}
         <h1 className="text-center font-semibold mb-10 text-2xl relative after:content-[''] after:block after:w-[80px] after:h-0.5 after:bg-gray-300 after:absolute after:left-1/2 after:bottom-0 after:-translate-x-1/2 pb-4">
-          RECENET PROJECTS
+        How It Works
         </h1>
-        <div className="w-[1024px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="card relative bg-[#5e93b922] shadow-md transition-transform duration-300 hover:translate-y-[-10px]"
+              className="card relative bg-[#5e93b922] shadow-md transition-transform duration-300 hover:translate-y-[-10px] rounded-lg overflow-hidden"
             >
               <img
                 src={card.image}
                 alt={`Card Image ${index + 1}`}
-                className="w-[320px] h-[280px] object-cover mx-auto"
+                className="w-full max-h-72 object-cover"
               />
-              <div className="pb-4">
-                <h3 className="text-center mt-4 font-semibold text-xl">
+              <div className="p-4">
+                <h3 className="text-center mt-2 font-semibold text-xl text-gray-700">
                   {card.heading}
                 </h3>
                 <p className="text-center text-gray-600">{card.subheading}</p>

@@ -1,25 +1,28 @@
 import React from "react";
 import Banner from "./Banner.jsx";
 import Footer from "./Footer.jsx";
-import Gallery from "./Gallery.jsx";
-import GetInTouch from "./GetInTouch.jsx";
 import Header from "./Header.jsx";
-import OurTeamSection from "./OurTeamSection.jsx";
-import ProcessSection from "./ProcessSection.jsx";
-import Testimonial from "./Testimonial.jsx"
+import Slider from './Slider.jsx'
+import Steps from './Steps.jsx'
+import WhyChoose from "./WhyChoose.jsx";
+import Slider2 from './Slider2.jsx';
+import BannerIcon from './BannerIcon.jsx'
 
 
 const Main = () => {
   return (
     <>
       <Header />
+      <Slider2/>
+
+      <BannerIcon/>
+      {/* <Slider/> */}
       <Banner />
-      <ProcessSection />
-      <Gallery />
-      <OurTeamSection />
-      <Testimonial/>
-      <GetInTouch />
+      <WhyChoose/>
+      <Steps/>
       <Footer />
+
+      
     </>
   );
 };

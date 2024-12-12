@@ -1,61 +1,108 @@
 import React from "react";
+import {
+  FaFacebookF,
+  FaGooglePlay,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa"; // Social Icons
+import { FiMail, FiPhone } from "react-icons/fi"; // Contact Icons
+import { HiOutlineLocationMarker } from "react-icons/hi"; // Location Icon
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 py-14">
-      <div className="max-w-4xl mx-auto">
-        {/* Form Section */}
-        <form className="bg-gray-800 p-6 rounded-lg shadow-lg">
-          <div className="space-y-4">
-            {/* Name Input */}
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
-            />
-            {/* Email Input */}
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
-            />
-            {/* Budget Input */}
-            <input
-              type="text"
-              placeholder="Budget"
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400"
-            />
-            {/* Textarea for Project Description */}
-            <textarea
-              placeholder="Describe your project..."
-              className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400 resize-none h-24"
-            ></textarea>
+    <footer className="bg-[#483058] text-white py-10 px-6 h-auto">
+      <div className="max-w-[1280px] m-auto">
+        {/* 4 sections */}
+        <div className="flex flex-wrap gap-10 justify-between">
+          {/* Column 1 - Logo and Description */}
+          <div className="w-full md:w-[40%]">
+            <h2 className="text-2xl font-bold text-red-500">
+              Bid <span className="text-white">Venchure</span>
+            </h2>
+            <p className="mt-4 text-sm  ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+              fugit non. Incidunt dolorum adipisci, tempore asperiores nemo odio
+              facere officiis enim animi placeat eaque nesciunt alias beatae id,
+              at dicta.
+            </p>
+            {/* Social Icons */}
+            <div className="flex mt-4 space-x-4">
+              <FaFacebookF className="w-6 h-6 text-white hover:text-blue-500 cursor-pointer" />
+              <FaTwitter className="w-6 h-6 text-white hover:text-blue-400 cursor-pointer" />
+              <FaInstagram className="w-6 h-6 text-white hover:text-pink-500 cursor-pointer" />
+              <FaLinkedinIn className="w-6 h-6 text-white hover:text-blue-700 cursor-pointer" />
+            </div>
           </div>
 
-          {/* Centered Button */}
-          <div className="flex justify-center mt-4">
-            <button
-              type="submit"
-              className="px-7 py-3.5 bg-transparent border border-teal-400 text-teal-400 rounded-md hover:bg-teal-400 hover:text-black transition"
-            >
-              Send Message
-            </button>
+          {/* Column 2 - Pages */}
+          <div className="w-full md:w-[15%]">
+            <h3 className="font-semibold text-lg mb-4">Pages</h3>
+            <div className="flex flex-col space-y-2">
+              <Link to="/" className="hover:text-blue-500">
+                Home
+              </Link>
+              <Link to="/works" className="hover:text-blue-500">
+                Works
+              </Link>
+              <Link to="/services" className="hover:text-blue-500">
+                Service
+              </Link>
+            </div>
           </div>
-        </form>
 
-        {/* Footer Text */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">
-            Minimal Template made in Webflow. All rights reserved.
-          </p>
+          {/* Column 3 - More Pages */}
+          <div className="w-full md:w-[15%]">
+            <h3 className="font-semibold text-lg mb-4">More Pages</h3>
+            <div className="flex flex-col space-y-2">
+              <Link to="/event" className="hover:text-blue-500">
+                Event
+              </Link>
+              <Link to="/aboutus" className="hover:text-blue-500">
+                About Us
+              </Link>
+              <Link to="/contactus" className="hover:text-blue-500">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+
+          {/* Column 4 - Contact Info */}
+          <div className="w-full md:w-[30%]">
+            <div className="space-y-1">
+              <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
+              <Link className="flex items-center space-x-2">
+                <FiPhone className="text-xl" />
+                <span className="font-thin">+91 1800123444</span>
+              </Link>
+              <Link className="flex items-center space-x-2">
+                <FiMail className="text-xl" />
+                <span className="font-thin">help@lorem.com</span>
+              </Link>
+              <Link className="flex items-center space-x-2">
+                <HiOutlineLocationMarker className="text-xl" />
+                <span className="font-thin">
+                  Sub Nerdiv, Mumbai, India, 123456
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Decorative Element */}
-        <div className="mt-4 text-center text-gray-500">
-          <span className="text-sm">N</span>
-          <span className="mx-2">M</span>
-          <span className="text-sm">F</span>
+        {/* Column 5 - Download the App */}
+        <div className="mt-8">
+          <h3 className="font-bold text-lg mb-4">Download the app</h3>
+          <div className="flex items-center space-x-2">
+            <FaGooglePlay className="w-8 h-8 text-white" />
+            <span>Get it on Google Play</span>
+          </div>
         </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="mt-8 border-t border-white/10 pt-4 text-center text-sm">
+        © Copyright 2024, All Rights Reserved by YOUR WEBSITE. PVT. LTD
       </div>
     </footer>
   );
