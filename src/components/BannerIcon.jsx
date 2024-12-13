@@ -27,7 +27,7 @@ const BannerIcon = () => {
     "Baby Shower",
     "Festival Event",
     "Corporate Gathering",
-    "Anniversary Celebration",
+    "Anniversary ",
   ];
 
   const settings = {
@@ -48,9 +48,9 @@ const BannerIcon = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-[150px] h-[150px] rounded-full object-cover bg-center border shadow-md mx-auto"
+              className="w-[120px] h-[120px] rounded-full object-cover bg-center border shadow-md mx-auto"
             />
-            <p className="text-sm font-medium mt-2 text-gray-700">
+            <p className="text-[18px] font-medium mt-2 text-gray-700">
               {captions[index]}
             </p>
           </div>

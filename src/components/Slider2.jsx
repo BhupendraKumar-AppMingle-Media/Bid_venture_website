@@ -40,7 +40,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="sliderContainer  mt-36  w-full lg:p-4 sm:pt-1 sm:pb-1 md:p-6 lg:pt-0 lg:pl-10 lg:pr-10 relative sm:h[150px]">
+    <div className="sliderContainer  mt-[84px]  w-full lg:p-4 sm:pt-1 sm:pb-1 md:p-6 lg:pt-0 lg:pl-10 lg:pr-10 relative sm:h[150px]">
 
       <Slider {...settings}>
         {images.map((image, index) => (

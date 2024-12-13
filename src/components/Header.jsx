@@ -82,7 +82,7 @@ const Header = () => {
 
 
       {/* Header for Desktop */}
-      <header className="flex justify-between items-center  px-8 py-8 fixed top-0 z-10 shadow-md w-full min-h-16 bg-[#d3d7e9]">
+      <header className="flex justify-between items-center  px-8 py-4 fixed top-0 z-10 shadow-md w-full min-h-16 bg-[#d3d7e9]  ">
       {/* <header className="flex justify-between items-center  px-8 py-4 fixed top-0 z-10 shadow-md w-full min-h-16 bg-gradient-to-r from-[#f3f1f4] to-[#ea1c45]"> */}
         {/* Logo */}
         <img src={bidVentureLogo} alt="Logo" className="hidden md:block w-52" />
@@ -103,7 +103,7 @@ const Header = () => {
           </Link>
           <Link
             to="/services"
-            className="text-xl font-semiabold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
+            className="text-xl font-semibold relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             Services
           </Link>

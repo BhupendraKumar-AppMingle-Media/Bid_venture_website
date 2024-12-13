@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#483058] text-white py-10 px-6 h-auto">
+    <footer className="bg-[#483058]  font-medium text-white py-10 px-6 h-auto">
       <div className="max-w-[1280px] m-auto">
         {/* 4 sections */}
         <div className="flex flex-wrap gap-10 justify-between">
@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Column 2 - Pages */}
           <div className="w-full md:w-[15%]">
-            <h3 className="font-semibold text-lg mb-4">Pages</h3>
+            <h3 className="font-semibold  text-2xl mb-4">Pages</h3>
             <div className="flex flex-col space-y-2">
               <Link to="/" className="hover:text-blue-500">
                 Home
@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Column 3 - More Pages */}
           <div className="w-full md:w-[15%]">
-            <h3 className="font-semibold text-lg mb-4">More Pages</h3>
+            <h3 className="font-semibold text-2xl mb-4">More Pages</h3>
             <div className="flex flex-col space-y-2">
               <Link to="/event" className="hover:text-blue-500">
                 Event

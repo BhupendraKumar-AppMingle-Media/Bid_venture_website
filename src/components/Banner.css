@@ -30,3 +30,36 @@
     background-position: 100% 50%;
   }
 }
+
+
+/* Infinite line animation */
+@keyframes line-left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes line-right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.animated-border {
+  position: relative;
+  z-index: 1;
+}
+
+.animate-line-left {
+  animation: line-left 3s linear infinite;
+}
+
+.animate-line-right {
+  animation: line-right 3s linear infinite;
+}

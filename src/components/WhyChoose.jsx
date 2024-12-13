@@ -40,27 +40,32 @@ const WhyChoose = () => {
 
   return (
     <div
-      className="why-choose-us mt-[110px] px-4 md:px-8 lg:px-16"
+      className="why-choose-us  px-4 md:px-8 lg:px-16"
       style={{ willChange: "transform, opacity" }}
     >
-      <h1 className="text-3xl md:text-4xl lg:text-5xl text-center text-black font-bold uppercase mb-6">
+      <h1 className="text-3xl md:text-4xl lg:text-4xl text-center text-black font-bold uppercase mb-6">
         Why Choose Us
       </h1>
       <div className="timeline space-y-8"> {/* Reduced space between items */}
         {/* Card 1 */}
-        <div className="timeline-item flex flex-wrap md:flex-nowrap justify-between items-center w-full">
-          <div className="ml-2 md:ml-4 content w-full md:w-[48%]" ref={card1}>
-            <h3>
-              <span className="number text-2xl font-bold text-blue-600">01</span>
-            </h3>
+        <div className="timeline-item  flex flex-wrap md:flex-nowrap justify-between items-center w-full">
+
+
+          <div className="ml-2 md:ml-2 content w-full md:w-[48%]" ref={card1}>
+            {/* <h5>
+              <span className="number  font-bold ">01</span>
+            </h5> */}
             <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
               Save Time
             </h1>
-            <p className="text-sm md:text-base lg:text-lg text-gray-700 mt-2">
+            <p className="text-sm md:text-base lg:text-lg text-gray-700 ">
               Receive tailored offers from multiple restaurants without lifting
               a finger.
             </p>
           </div>
+
+
+
           <div className="w-full md:w-[48%] h-[180px] md:h-[180px] mt-4 md:mt-0"> {/* Reduced height */}
             <img
               src={savetime}
@@ -85,9 +90,9 @@ const WhyChoose = () => {
             className="mr-2 md:mr-4 content w-full md:w-[48%]"
             ref={card2}
           >
-            <h3>
+            {/* <h3>
               <span className="number text-2xl font-bold text-blue-600">02</span>
-            </h3>
+            </h3> */}
             <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
               Transparent Pricing
             </h1>
@@ -100,9 +105,9 @@ const WhyChoose = () => {
         {/* Card 3 */}
         <div className="timeline-item flex flex-wrap md:flex-nowrap justify-between items-center w-full">
           <div className="ml-2 md:ml-4 content w-full md:w-[48%]" ref={card3}>
-            <h3>
+            {/* <h3>
               <span className="number text-xl font-bold text-blue-600">03</span>
-            </h3>
+            </h3> */}
             <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
               Endless Options
             </h1>
@@ -132,9 +137,9 @@ const WhyChoose = () => {
             />
           </div>
           <div className="mr-2 md:mr-4 content w-full md:w-[48%]" ref={card4}>
-            <h3>
+            {/* <h3>
               <span className="number text-xl font-bold text-blue-600">04</span>
-            </h3>
+            </h3> */}
             <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold">
               Win-Win Model
             </h1>
