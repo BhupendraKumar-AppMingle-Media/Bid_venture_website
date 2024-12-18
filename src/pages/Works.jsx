@@ -1,30 +1,60 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import './Works.css'
+import WorkHomeCard from '../../src/pages/WorkHomeCard'
+
+import backgroundImage from '../images/banner1.png'; // Adjust path as needed
+
 
 const Works = () => {
   return (
     <>
      <Header />
-    <div className="bg-gray-50 py-16 mt-24">
+
+
+
+    <div className="bg-gray-50 py-16 mt-16">
      
       
-      <div className="container mx-auto px-6 lg:px-16 text-center">
+      <div className="container1 mx-auto px-6 lg:px-16 text-center">
         {/* Heading */}
         <h1 className="text-4xl font-bold text-gray-800 mb-6">
           Plan Smarter. Book Faster.
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg text-gray-600 mb-12">
+        <p className="text-lg text-gray-600 ">
           See how our platform connects customers and restaurants seamlessly.
         </p>
 
+
+         <WorkHomeCard/>
+
+
+
+
         {/* Step-by-Step Guide */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-16">
           {/* For Customers */}
-          <div className="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <h2 className="text-2xl font-semibold text-[#d2273f] mb-6">For Customers</h2>
+          <div className="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
+
+
+            {/* <h2 className="text-2xl font-semibold text-[#d2273f] mb-6">For Customers</h2> */}
+
+            <div className="private1">
+            <p href="#" className="animated-button1">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <button className="private-funding1 font-bold">
+              For Customers
+              </button>
+            </p>
+
+
+          </div>
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
@@ -64,7 +94,25 @@ const Works = () => {
 
           {/* For Restaurants */}
           <div className="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <h2 className="text-2xl font-semibold text-[#d2273f] mb-6">For Restaurants</h2>
+
+
+            {/* <h2 className="text-2xl font-semibold text-[#d2273f] mb-6">For Restaurants</h2> */}
+
+            <div className="private1">
+            <p href="#" className="animated-button1">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <button className="private-funding1 font-bold">
+              For Restaurant
+              </button>
+            </p>
+
+
+          </div>
+
+
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="bg-[#d2273f] text-white p-3 rounded-full">
@@ -97,14 +145,58 @@ const Works = () => {
           </div>
         </div>
 
+
+
         {/* CTA Section */}
-        <div className="bg-[#d2273f] text-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+
+
+
+
+        {/* <div className="work-button  bg-[#d2273f] h-[250px] pt-20 text-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
           <h2 className="text-2xl font-semibold mb-4">Join us today and make event planning a breeze!</h2>
           <button className="bg-white text-[#d2273f] font-semibold py-2 px-6 rounded-lg hover:bg-gray-100 transition-all duration-300">
             Get Started
           </button>
-        </div>
+        </div> */}
+
+
+
+
+<div
+  className="work-button relative h-[250px] pt-20 text-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${backgroundImage})`, // Use imported image
+  }}
+>
+  {/* Blurred Background Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-md rounded-lg  "></div>
+
+  {/* Content */}
+  <div className="relative z-10 mb-4 ">
+    <h2 className="text-2xl font-semibold mb-4">
+      Join us today and make event planning a breeze!
+    </h2>
+    <button className="bg-white text-[#d2273f] font-semibold py-2 px-6 rounded-lg hover:bg-gray-100 transition-all duration-300">
+      Get Started
+    </button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
 
       
     </div>

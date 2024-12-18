@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Slider2.css";
 
 const Carousel = () => {
 
@@ -40,7 +41,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="sliderContainer  mt-[84px]  w-full lg:p-4 sm:pt-1 sm:pb-1 md:p-6 lg:pt-0 lg:pl-10 lg:pr-10 relative sm:h[150px]">
+    <div className=" Container mt-16   w-full  sm:pt-1 sm:pb-1  lg:pt-0  relative sm:h[150px]">
 
       <Slider {...settings}>
         {images.map((image, index) => (
@@ -48,7 +49,7 @@ const Carousel = () => {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="rounded-xl w-full object-cover bg-center border shadow-md max-sm:h-[150px] max-md:h-[200px] lg:h-[470px]"
+              className="sliderContainer w-full object-cover  bg-center border shadow-md max-sm:h-[150px] max-md:h-[200px] lg:h-[470px]"
             />
           </div>
         ))}

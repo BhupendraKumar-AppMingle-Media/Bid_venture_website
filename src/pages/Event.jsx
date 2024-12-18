@@ -1,18 +1,20 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import './Event.css'
 
 const Event = () => {
   return (
     <div>
       <Header />
 
-      <section className="bg-[#f5f5f5] py-16 px-6 mt-20">
-        <div className="container mx-auto max-w-4xl bg-white p-8 rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold text-center text-[#4A90E2] mb-4">
+      <section className="bg-[#f5f5f5] py-8 px-4 mt-16 sm:py-16 sm:px-6">
+        
+        <div className="container-event mx-auto max-w-full sm:max-w-4xl bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+          <h1 className="text-2xl sm:text-3xl font-bold text-center text-[#0a0a0a] mb-4">
             Plan Your Perfect Event in Minutes
           </h1>
-          <p className="text-center text-lg text-gray-600 mb-8">
+          <p className="text-center text-base sm:text-lg text-gray-600 mb-6">
             Tell us what you need, and let nearby restaurants offer their best deals.
           </p>
 
@@ -21,13 +23,13 @@ const Event = () => {
             <div className="mb-6">
               <label
                 htmlFor="event-type"
-                className="block text-lg font-medium text-gray-700"
+                className="block text-sm sm:text-lg font-medium text-[#ff9400]"
               >
                 Event Type
               </label>
               <select
                 id="event-type"
-                className="mt-2 w-full p-3 border border-gray-300 rounded-md"
+                className="mt-2 w-full p-3 border border-gray-300 rounded-md "
               >
                 <option value="birthday">Birthday</option>
                 <option value="wedding">Wedding</option>
@@ -39,7 +41,7 @@ const Event = () => {
             <div className="mb-6">
               <label
                 htmlFor="event-date"
-                className="block text-lg font-medium text-gray-700"
+                className="block text-sm sm:text-lg font-medium text-[#ff9400]"
               >
                 Event Date and Time
               </label>
@@ -54,7 +56,7 @@ const Event = () => {
             <div className="mb-6">
               <label
                 htmlFor="guests"
-                className="block text-lg font-medium text-gray-700"
+                className="block text-sm sm:text-lg font-medium text-[#ff9400]"
               >
                 Number of Guests
               </label>
@@ -70,7 +72,7 @@ const Event = () => {
             <div className="mb-6">
               <label
                 htmlFor="budget"
-                className="block text-lg font-medium text-gray-700"
+                className="block text-sm sm:text-lg font-medium text-[#ff9400]"
               >
                 Budget Per Guest
               </label>
@@ -86,7 +88,7 @@ const Event = () => {
             <div className="mb-6">
               <label
                 htmlFor="location"
-                className="block text-lg font-medium text-gray-700"
+                className="block text-sm sm:text-lg font-medium text-[#ff9400]"
               >
                 Location
               </label>
@@ -102,7 +104,7 @@ const Event = () => {
             <div className="mb-6">
               <label
                 htmlFor="preferences"
-                className="block text-lg font-medium text-gray-700"
+                className="block text-sm sm:text-lg font-medium text-[#ff9400]"
               >
                 Additional Preferences
               </label>
@@ -118,13 +120,15 @@ const Event = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-[#4A90E2] text-white px-8 py-3 rounded-lg text-lg hover:bg-[#357ABD] transition duration-300"
+                className=" explore-btn2 bg-[#4A90E2] text-white px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-[#357ABD] transition duration-300"
               >
                 Post Your Event Now and Start Receiving Offers!
               </button>
             </div>
           </form>
+
         </div>
+
       </section>
 
       <Footer />

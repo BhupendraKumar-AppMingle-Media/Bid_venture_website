@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Testimonial from "../components/Testimonial.jsx"
 import OurTeamSection from "../components/OurTeamSection.jsx";
 import FAQ from '../components/FAQ.jsx'
+import './Aboutus.css'
 
 
 
@@ -12,16 +13,9 @@ const Aboutus = () => {
   return (
     <>
      <Header />
-    <section className="bg-gray-50 py-16 px-6 md:px-20">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-        {/* Left Side - Image */}
-        <div className="flex justify-center items-center">
-  <img
-    src={img} // replace with your actual image path
-    alt="Team"
-    className="w-full md:w-3/4 lg:w-1/2 xl:w-2/5 h-auto rounded-lg shadow-xl"
-  />
-</div>
+    <section className="bg-gray-50 py- px-6 md:px-20 md:mt-40 md:ml-20  mt-20">
+      <div className="container-about  mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 ">
+     
 
 
         {/* Right Side - Content */}
@@ -49,6 +43,22 @@ const Aboutus = () => {
             </button>
           </div>
         </div>
+
+
+
+        {/*  */}
+
+           {/* Left Side - Image */}
+    <div className="flex justify-center items-center">
+  <img
+    src={img} // replace with your actual image path
+    alt="Team"
+    className="  aboutus-image
+    w-[500px]   lg:w-2/3  h-auto rounded-lg shadow-xl"
+  />
+</div>
+
+        
       </div>
     </section>
     <OurTeamSection />

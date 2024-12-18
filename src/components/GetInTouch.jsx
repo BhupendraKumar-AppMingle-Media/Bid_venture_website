@@ -60,7 +60,7 @@ const GetInTouch = () => {
 
   return (
     <>
-      <div id="contact">
+      <div id="contact w-full">
         <section className="bg-teal-100 py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <h2 className="text-center text-3xl font-semibold text-gray-800 mb-12">

@@ -2,6 +2,7 @@ import React from "react";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { ImMail3 } from "react-icons/im";
 import man1 from "../images/man1.png";
+import './OurTeamSection.css'
 
 const OurTeamSection = () => {
   return (
@@ -18,8 +19,8 @@ const OurTeamSection = () => {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className=" bg-[#d3d7e9] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 max-w-sm mx-auto"
-          >
+            className="team-card bg-[#d3d7e9] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 max-w-sm mx-auto"
+              >
             <div className="mb-4">
               <img
                 src={man1}

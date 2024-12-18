@@ -6,10 +6,10 @@ import target from "../images/target.png";
 
 const PrivateFunding = () => {
     return (
-        <div>
-        <div className="service4" data-aos="fade-up">
+        <div className="mt-6">
+        <div className="service4 " data-aos="fade-up">
             
-            <div className="service-content">
+            <div className="service-content  ">
                 <div className="services4">
                     <h2 className="service-title">Targeted Opportunities</h2>
                     <p>

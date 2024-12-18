@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Service from './Service.css'
+import './Service.css'
 import ServiceCard from '../components/ServiceCard'
+import backgroundImage from '../images/banner1.png'; // Adjust path as needed
+
 
 const Services = () => {
   const testimonials = [
@@ -30,8 +32,8 @@ const Services = () => {
   return (
     <>
       <Header />
-      <div className="bg-gray-50 py-16 mt-20">
-        <div className="container mx-auto px-6 lg:px-16 text-center">
+      <div className=" service-top bg-gray-50 py-16 mt-16">
+        <div className="container-services mx-auto px-6 lg:px-16 text-center">
           {/* Heading */}
           <h1 className="text-4xl font-bold text-gray-800 mb-6">
             Turn Opportunities into Bookings
@@ -78,12 +80,39 @@ const Services = () => {
 
 
           {/* Call to Action */}
-          <div className="bg-[#7489e3]  p-6  rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mt-10">
+          {/* <div className="bg-[#7489e3] h-[250px] pt-20 p-6  rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 mt-10">
             <h2 className="text-2xl font-semibold mb-4">Sign up today and start winning more business!</h2>
             <button className="bg-white text-[#2b3560] font-semibold py-1 px-6 rounded-lg hover:bg-gray-100 transition-all duration-300">
               Get Started
             </button>
-          </div>
+          </div> */}
+
+
+
+<div
+  className="work-button relative h-[250px] pt-20 mt-10 text-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${backgroundImage})`, // Use imported image
+  }}
+>
+  {/* Blurred Background Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-md rounded-lg"></div>
+
+  {/* Content */}
+  <div className="relative z-10">
+    <h2 className="text-2xl font-semibold mb-4">
+    Sign up today and start winning more business!
+    </h2>
+    <button className="bg-white text-[#d2273f] font-semibold py-2 px-6 rounded-lg hover:bg-gray-100 transition-all duration-300">
+      Get Started
+    </button>
+  </div>
+</div>
+
+
+
+
+
         </div>
       </div>
       <Footer />

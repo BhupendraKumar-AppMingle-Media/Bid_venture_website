@@ -5,8 +5,20 @@ module.exports = {
     extend: {
       screens: {
         md: '768px',
+        'custom': '780px',
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: true, // Ensures Tailwind resets styles properly
+  },
+
+  variants: {
+    extend: {
+      textDecoration: ["hover"], // Ensures hover effects are generated
+    },
+  },
+
+
 };
